@@ -139,5 +139,6 @@ def test_delitem():
     assert str(l) == "1 → 2 → 3 → 4" and l.tete.valeur == 1 and l.queue.valeur == 4
     del l[3]
     assert str(l) == "1 → 2 → 3" and l.tete.valeur == 1 and l.queue.valeur == 3
-    for _ in range(3): del l[0]
+    for _ in range(3):
+        del l[0]
     assert str(l) == "None" and l.tete is l.queue

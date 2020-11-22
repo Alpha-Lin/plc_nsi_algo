@@ -134,13 +134,15 @@ class Liste:
         """ implémente l'opérateur == qui doit renvoyer
         TRUE si et seulement si, les cellules des deux listes
         contiennent les mêmes valeurs au même position"""
-        if self._taille != len(autre): return False
+        if self._taille != len(autre):
+            return False
 
         courante = self.tete
         couranteAutre = autre.tete
 
         for _ in range(self._taille):
-            if courante.valeur != couranteAutre.valeur: return False
+            if courante.valeur != couranteAutre.valeur:
+                return False
             courante = courante.suivante
             couranteAutre = couranteAutre.suivante
 
